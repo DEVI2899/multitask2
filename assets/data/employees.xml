@@ -1,0 +1,27 @@
+<data>
+    <employeedetails>
+        <name>devi</name>
+        <age>24</age>
+        <address>erode</address>
+    </employeedetails>
+    <employeedetails>
+        <name>john</name>
+        <age>35</age>
+        <address>erode</address>
+    </employeedetails>
+    <employeedetails>
+        <name>peter</name>
+        <age>29</age>
+        <address>erode</address>
+    </employeedetails>
+    <employeedetails>
+        <name>priya</name>
+        <age>26</age>
+        <address>erode</address>
+    </employeedetails>
+    <employeedetails>
+        <name>sam</name>
+        <age>24</age>
+        <address>chennai</address>
+    </employeedetails>
+</data>
