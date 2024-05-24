@@ -11,8 +11,6 @@ class Animations extends StatefulWidget {
 
 class _AnimationsState extends State<Animations>{
   String message = 'New';
-
-
   @override
   Widget build(BuildContext context) {
     return  SafeArea(

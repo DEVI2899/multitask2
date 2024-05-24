@@ -1,8 +1,7 @@
 
-import 'dart:math';
+import 'package:ecommerce_app/animationController/cubeanimation.dart';
 import 'package:ecommerce_app/bottomNavBar/adddetails.dart';
 import 'package:ecommerce_app/bottomNavBar/calender.dart';
-import 'package:ecommerce_app/bottomNavBar/dataset.dart';
 import 'package:ecommerce_app/bottomNavBar/grocery.dart';
 import 'package:ecommerce_app/xml%20parsing/xmlparse.dart';
 import 'package:flutter/material.dart';
@@ -81,7 +80,6 @@ class _NestedTabBarState extends State<NestedTabBar> {
       _selectedIndex = index;
     });
   }
-
   @override
   Widget build(BuildContext context) {
 
@@ -89,9 +87,9 @@ class _NestedTabBarState extends State<NestedTabBar> {
           body: Container(
                 color: Colors.white,
                 child: _selectedIndex ==0 ?const add_details()
-                    :_selectedIndex == 1 ? grocery()
+                    :_selectedIndex == 1 ? const CubeAnimation()
                     : _selectedIndex == 2 ? const calender()
-                    :_selectedIndex == 3 ? const dataset()
+                    :_selectedIndex == 3 ? grocery()
                     : const search()
 
             ),

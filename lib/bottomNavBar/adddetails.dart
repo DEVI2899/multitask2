@@ -1,4 +1,6 @@
+import 'package:ecommerce_app/controller/getxcontroller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class add_details extends StatefulWidget {
   const add_details({super.key});
@@ -8,6 +10,7 @@ class add_details extends StatefulWidget {
 }
 
 class _add_detailsState extends State<add_details> {
+  getxcontroller controller = Get.put(getxcontroller());
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -99,9 +102,21 @@ class _add_detailsState extends State<add_details> {
                   ]
               )
             ],
+          ),
+          GetBuilder<getxcontroller>(
+              builder:(val) =>
+              Text('${val.counter}' , style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),)
           )
         ],
 
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          FloatingActionButton(onPressed: controller.increment, child: const Icon(Icons.add),),
+          const SizedBox(width: 50,),
+          FloatingActionButton(onPressed: controller.decrement, child: const Icon(Icons.remove),)
+        ],
       ),
     );
   }
